@@ -1,0 +1,12 @@
+Utwórz serwer HTTP w Node.js, który obsługuje pliki statyczne oraz dynamicznie generuje treści.
+Implementuj serwer w server.js, który używa modułów http i fs.
+Serwer powinien zwracać index.html jako stronę główną.
+Obsłuż żądania do plików CSS i JS z katalogu public, który powinien znajdować się w tym samym miejscu co odpalany server
+Dla ścieżki /dynamic, generuj dynamicznie treść HTML z bieżącą datą i czasem.
+Obsługa plików statycznych: Zaimplementuj funkcję serveStaticFile do obsługi plików statycznych z odpowiednim MIME type.
+
+Skonfiguruj serwer pod nazwą cacheServer.js, aby obsługiwał żądania GET, przyjmując określoną ścieżkę, np. /data.
+Stwórz w pliku cacheServer.js prosty mechanizm cache'owania w pamięci, który przechowuje odpowiedzi serwera dla określonych ścieżek i parametrów żądania.
+Przed zwróceniem odpowiedzi, sprawdź, czy odpowiednia odpowiedź jest już zapisana w cache. Jeśli tak, zwróć ją natychmiast, zamiast ponownie przetwarzać żądanie.
+W przypadku braku odpowiedzi w cache, przetwórz żądanie, wygeneruj odpowiedź, zapisz ją w cache, a następnie ją zwróć.
+Implementuj mechanizm wygaśnięcia dla zapisanych w cache odpowiedzi, aby nie były one przechowywane w nieskończoność. Można ustawić globalny czas życia dla cache lub indywidualne czasy dla poszczególnych odpowiedzi (10 sekund).
